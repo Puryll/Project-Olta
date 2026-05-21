@@ -1,12 +1,11 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": ".",
   "public": true,
-  "env": {},
-  "functions": {
-    "app.js": {
-      "memory": 1024,
-      "maxDuration": 60
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
-  }
+  ]
 }
