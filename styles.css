@@ -134,8 +134,8 @@ footer a:hover {
 }
 
 .product-card img {
-  width: 70%;
-  height: 70%;
+  width: 65%;
+  height: 65%;
   object-fit: cover;
   border-radius: 20px;
   z-index: 1;
@@ -158,7 +158,7 @@ footer a:hover {
 .product-card::before {
   content: '';
   position: absolute;
-  width: 5rem;
+  width: 4rem;
   background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
   height: 130%;
   animation: rotBGimg 3.5s linear infinite;
@@ -194,8 +194,8 @@ footer a:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-right: 15rem;
-  margin-left: 15rem;
+  margin-right: 5rem;
+  margin-left: 5rem;
 }
 
 .product {
