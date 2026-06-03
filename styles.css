@@ -200,7 +200,7 @@ footer a:hover {
 }
 
 .product {
-  background: linear-gradient(to top, red, orange);
+  background: linear-gradient(to top, rgb(255, 62, 62), orange);
   height: 100vh;
   display: flex;
   justify-content: center;
