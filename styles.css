@@ -76,6 +76,7 @@ section {
     cursor: pointer;
     transition: background-color 0.5s ease;
     text-decoration: none;
+    z-index: 1;
 }
 
 .btn:hover {
@@ -233,7 +234,7 @@ footer a:hover {
   color: white;
   font-size: 2rem;
   border: 15px solid #ff8a3c;
-  border-radius: 15px;
+  border-radius: 50px;
   background-color: #be4c00;
   height: 50vh;
   width: 25%;
