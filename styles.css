@@ -21,6 +21,8 @@
 }
 
 .navbar a {
+    position: relative;
+    display: inline-block;
     font-family:'Times New Roman', Times, serif;
     text-decoration: none;
     color:aqua;
@@ -62,16 +64,17 @@
 }
 
 section {
-    height:100vh;
+    width: 100%;
 }
 
 .hero {
     display:flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    min-height: 70vh;
     justify-content: center;
-    background: linear-gradient(to top, red, orange)
+    padding: 4rem 1rem;
+    background: linear-gradient(to top, red, orange);
 }
 
 .hero h1 {
@@ -106,14 +109,122 @@ section {
     color: black;
 }
 
+@media (max-width: 1024px) {
+  .container-navbar {
+    justify-content: center;
+    margin-right: 0;
+    padding: 0 1rem;
+  }
+
+  .navbar {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar a {
+    font-size: 1.4rem;
+  }
+
+  .container-navbar h1 {
+    font-size: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .hero p {
+    font-size: 1.8rem;
+    max-width: 90%;
+  }
+
+  .product-card {
+    width: 40vw;
+  }
+
+  .features {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .feature {
+    width: 46%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-navbar {
+    flex-direction: column;
+    height: auto;
+    gap: 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .product-card {
+    width: 90vw;
+  }
+
+  .feature {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar a {
+    font-size: 1.2rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.7rem 0.9rem;
+  }
+
+  .feature {
+    width: 100%;
+    border-radius: 1rem;
+  }
+
+  footer a {
+    border-width: 8px;
+  }
+}
 footer {
     background: linear-gradient(to bottom, rgb(255, 62, 62), orange);
     display: flex;
     width: 100%;
-    height: 30vh;
+    min-height: 30vh;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
+    padding: 2rem 1rem;
 }
 
 footer a {
@@ -134,8 +245,10 @@ footer a:hover {
 }
 
 .product-card {
-  width: 17.5vw;
-  height: 600px;
+  flex: 1 1 300px;
+  max-width: 360px;
+  min-width: 240px;
+  min-height: 470px;
   background: #803f0a;
   position: relative;
   display: flex;
@@ -143,9 +256,7 @@ footer a:hover {
   place-items: center;
   overflow: hidden;
   border-radius: 20px;
-  margin-left: 5rem;
-  margin-top: 2rem;
-  margin-right: 5rem;
+  margin: 1rem;
   flex-direction: column;
   align-items: center;
   transition: all 0.5s ease;
@@ -163,8 +274,8 @@ footer a:hover {
 }
 
 .product-card img {
-  width: 65%;
-  height: 65%;
+  width: 90%;
+  height: auto;
   object-fit: cover;
   border-radius: 20px;
   z-index: 1;
@@ -225,21 +336,23 @@ footer a:hover {
 
 .product-grid {
   display: flex;
-  margin-top: 20px;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  margin-right: 5rem;
-  margin-left: 5rem;
+  align-items: stretch;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 1rem;
 }
 
 .product {
   background: linear-gradient(to top, rgb(255, 62, 62), orange);
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 4rem 1rem 5rem;
 }
 
 .product h2 {
@@ -252,11 +365,12 @@ footer a:hover {
 
 .features {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   justify-content:center;
   align-items:center;
-  height: 100vh;
   background: linear-gradient(to bottom, red, orange);
+  padding: 4rem 1rem;
 }
 
 .feature {
@@ -270,8 +384,8 @@ footer a:hover {
   border: 15px solid #ff8a3c;
   border-radius: 50px;
   background-color: #be4c00;
-  height: 50vh;
-  width: 25%;
+  width: min(360px, 100%);
+  min-height: 320px;
   transition: all 0.5s ease;
 }
 

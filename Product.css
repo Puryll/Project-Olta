@@ -21,6 +21,8 @@
 }
 
 .navbar a {
+    position: relative;
+    display: inline-block;
     font-family: "New Times Roman", serif;
     text-decoration: none;
     color:aqua;
@@ -61,8 +63,10 @@
 }
 
 .card {
-  width: 17vw;
-  height: 600px;
+  flex: 1 1 280px;
+  max-width: 340px;
+  min-width: 240px;
+  min-height: 520px;
   background: #803f0a;
   position: relative;
   display: flex;
@@ -70,9 +74,7 @@
   place-items: center;
   overflow: hidden;
   border-radius: 20px;
-  margin-left: 5rem;
-  margin-top: 2rem;
-  margin-right: 5rem;
+  margin: 1rem;
   flex-direction: column;
   align-items: center;
   transition: all 0.5s ease;
@@ -90,8 +92,8 @@
 }
 
 .card img {
-  width: 70%;
-  height: 70%;
+  width: 90%;
+  height: auto;
   object-fit: cover;
   border-radius: 20px;
   z-index: 1;
@@ -155,20 +157,21 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-right: 10rem;
-  margin-left: 10rem;
-  margin-bottom: 5rem;
+  gap: 1.5rem;
+  margin: 0 auto 4rem;
+  padding: 0 1rem;
+  max-width: 1200px;
 }
 
 footer {
     background: linear-gradient(to bottom, rgb(255, 62, 62), orange);
     display: flex;
     width: 100%;
-    height: 30vh;
+    min-height: 30vh;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    padding-top: 2rem;
+    padding: 2rem 1rem 1.5rem;
 }
 
 footer a {
@@ -189,10 +192,13 @@ footer a:hover {
 }
 
 .hero {
-  height:150vh;
-  background:linear-gradient(to top, rgb(255, 62, 62), orange);
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 4rem 1rem;
+  background: linear-gradient(to top, rgb(255, 62, 62), orange);
 }
 
 .btn {
@@ -211,4 +217,166 @@ footer a:hover {
 .btn:hover {
     background-color: rgb(255, 255, 255);
     color: black;
+}
+
+@media (max-width: 1024px) {
+  .container-navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .navbar {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar a {
+    font-size: 1.4rem;
+  }
+
+  .container-navbar h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .card {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar a {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+  }
+}
+@media (max-width: 1024px) {
+  .container-navbar {
+    justify-content: center;
+    margin-right: 0;
+    padding: 0 1rem;
+  }
+
+  .navbar {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar a {
+    font-size: 1.4rem;
+  }
+
+  .container-navbar h1 {
+    font-size: 2rem;
+  }
+
+  .product-card {
+    width: 42vw;
+    height: auto;
+    margin: 1rem;
+  }
+
+  .product-grid {
+    margin: 1rem;
+  }
+
+  .features {
+    gap: 1rem;
+  }
+
+  .feature {
+    width: 40%;
+    height: auto;
+  }
+
+  .hero {
+    height: auto;
+    padding: 4rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .hero p {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-navbar {
+    flex-direction: column;
+    height: auto;
+    gap: 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .product-card {
+    width: 82vw;
+  }
+
+  .feature {
+    width: 90%;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    padding: 0.8rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar a {
+    font-size: 1.1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .feature {
+    width: 100%;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  footer a {
+    border-width: 8px;
+  }
 }
