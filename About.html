@@ -18,5 +18,164 @@
         <a href="Review.html">Reviews</a>
     </nav>
     </div>
+
+    <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #fff7f0;
+    color:#222;
+    line-height:1.7;
+}
+
+.hero{
+    min-height:70vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px;
+    background: linear-gradient(135deg,#ff512f,#ff8c00,#ffd700);
+    color:white;
+}
+
+.hero-content h1{
+    font-size:4rem;
+    margin-bottom:15px;
+    text-transform:uppercase;
+    letter-spacing:3px;
+}
+
+.hero-content p{
+    font-size:1.3rem;
+    max-width:700px;
+    margin:auto;
+}
+
+.about{
+    padding:80px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:50px;
+    color:#ff512f;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    padding:30px;
+    border-radius:20px;
+    background:white;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#ff512f;
+}
+
+.values{
+    margin-top:80px;
+    background:linear-gradient(135deg,#ff512f,#ff6a00,#ffc837);
+    color:white;
+    padding:80px 10%;
+    text-align:center;
+}
+
+.values h2{
+    font-size:2.5rem;
+    margin-bottom:20px;
+}
+
+.values p{
+    max-width:800px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.footer{
+    text-align:center;
+    padding:30px;
+    background:#111;
+    color:#fff;
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Glow Boutique</h1>
+        <p>
+            Bringing confidence, style, and bold fashion to women who love standing out.
+            We believe every outfit should make you feel unstoppable.
+        </p>
+    </div>
+</section>
+
+<section class="about">
+    <h2 class="section-title">About Us</h2>
+
+    <div class="about-grid">
+
+        <div class="card">
+            <h3>Our Story</h3>
+            <p>
+                Glow Boutique was created for trendsetters who love keeping their wardrobe
+                fresh, bold, and eye-catching. We focus on fashion-forward pieces that help
+                women express themselves with confidence.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Our Mission</h3>
+            <p>
+                Our mission is simple: make stylish fashion accessible while helping women
+                feel empowered, beautiful, and ready for every moment—from casual outings
+                to special occasions.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Why Shop With Us?</h3>
+            <p>
+                We carefully select trendy clothing, statement pieces, and everyday essentials.
+                Our collections are inspired by modern streetwear, social media trends, and
+                timeless confidence.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="values">
+    <h2>Fashion That Matches Your Energy</h2>
+    <p>
+        We celebrate individuality, confidence, and self-expression. Whether you're dressing
+        for brunch, a vacation, a night out, or simply feeling your best, our collections are
+        designed to help you own every room you walk into.
+    </p>
+</section>
+
+<footer class="footer">
+    © 2026 Glow Boutique • Confidence Starts With Your Style
+</footer>
 </body>
 </html>
