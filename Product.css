@@ -33,6 +33,7 @@
 .navbar a:hover {
     color: blue;
     transform: scale(1.2);
+    transition:all 0.5s ease;
 }
 
 .container-navbar h1 {
@@ -78,6 +79,7 @@
   flex-direction: column;
   align-items: center;
   transition: all 0.5s ease;
+
 }
 
 .card:hover {
@@ -137,7 +139,6 @@
   content: '';
   position: absolute;
   background: #ad5913;
-  ;
   inset: 15px;
   border-radius: 15px;
   transition: all 0.5s ease;

@@ -1,112 +1,143 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container-navbar {
-    background: linear-gradient(to bottom, red, orange);
-    display: flex;
-    width: 100%;
-    height: 10vh;
-    align-items: center;
-    justify-content: space-around;
-    margin-right: 2rem;
+  background: linear-gradient(to bottom, red, orange);
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 2rem;
 }
 
 .navbar {
-    display: flex;
-    gap: 3rem;;
-    box-sizing: border-box;
+  display: flex;
+  gap: 3rem;
+  box-sizing: border-box;
 }
 
 .navbar a {
-    position: relative;
-    display: inline-block;
-    font-family:'Times New Roman', Times, serif;
-    text-decoration: none;
-    color:aqua;
-    transition: all 0.5s ease;
-    font-size: 1.7rem;
+  position: relative;
+  display: inline-block;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  text-decoration: none;
+  color: aqua;
+  transition: all 0.5s ease;
+  font-size: 1.7rem;
 }
 
 .navbar a:hover {
-    color: blue;
-    transform: scale(1.2);
-    transition: all 0.5s ease;
+  color: blue;
+  transform: scale(1.2);
+  transition: all 0.5s ease;
 }
 
 .navbar a::after {
-    content:"";
-    width:100%;
-    height:6px;
-    background-image:linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
-    border-radius: 15px;
-    position:absolute;
-    bottom:0px;
-    left:0px;
-    transform:scalex(0);
-    transform-origin: center;
-    transition: 0.5s;
-    transition-timing-function:ease-in-out;
+  content: "";
+  width: 100%;
+  height: 6px;
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
+  border-radius: 15px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transform: scalex(0);
+  transform-origin: center;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 
 .navbar a:hover::after {
-    transform: scalex(1);
-    transition: 0.5s;
-    transition-timing-function: ease-in-out;
+  transform: scalex(1);
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 
 .container-navbar h1 {
-    font-size: 2.5rem;
-    color: rgb(0, 0, 0);
-    display: flex;
+  font-size: 2.5rem;
+  color: rgb(0, 0, 0);
+  display: flex;
 }
 
 section {
-    width: 100%;
+  width: 100%;
 }
 
 .hero {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 70vh;
-    justify-content: center;
-    padding: 4rem 1rem;
-    background: linear-gradient(to top, red, orange);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 70vh;
+  justify-content: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(to top, red, orange);
+  text-align: center;
 }
 
 .hero h1 {
-    font-size: 5rem;
-    color: rgb(0, 0, 0);
-    margin-bottom: 20px;
+  font-size: 5rem;
+  color: rgb(0, 0, 0);
+  margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 2rem;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    max-width: 600px;
-    margin-bottom: 30px;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  max-width: 600px;
+  margin-bottom: 30px;
 }
 
 .btn {
-    padding: 10px 20px;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: background-color 0.5s ease;
-    text-decoration: none;
-    z-index: 1;
+  padding: 10px 20px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  text-decoration: none;
+  z-index: 1;
 }
 
 .btn:hover {
-    background-color: rgb(255, 255, 255);
-    color: black;
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+.features {
+  display: grid;
+  grid-template-rows: 300px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 2rem 1rem;
+}
+
+.feature {
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.feature h2{
+  font-size: 32px;
+}
+
+.feature p{
+  font-size: 24px;
+}
+
+.product-card{
+  padding: 30px 0;
+  gap: 10px;
 }
 
 @media (max-width: 1024px) {
@@ -141,16 +172,6 @@ section {
 
   .product-card {
     width: 40vw;
-  }
-
-  .features {
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 2rem 1rem;
-  }
-
-  .feature {
-    width: 46%;
   }
 }
 
@@ -217,14 +238,14 @@ section {
   }
 }
 footer {
-    background: linear-gradient(to bottom, rgb(255, 62, 62), orange);
-    display: flex;
-    width: 100%;
-    min-height: 30vh;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-    padding: 2rem 1rem;
+  background: linear-gradient(to bottom, rgb(255, 62, 62), orange);
+  display: flex;
+  width: 100%;
+  min-height: 30vh;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 2rem 1rem;
 }
 
 footer a {
@@ -283,7 +304,7 @@ footer a:hover {
 }
 
 .product-card img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: all 0.5s ease;
 }
 
@@ -296,10 +317,14 @@ footer a:hover {
 }
 
 .product-card::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 4rem;
-  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  background-image: linear-gradient(
+    180deg,
+    rgb(0, 183, 255),
+    rgb(255, 48, 255)
+  );
   height: 130%;
   animation: rotBGimg 3.5s linear infinite;
   transition: all 0.2s linear;
@@ -316,15 +341,14 @@ footer a:hover {
 }
 
 .product-card::after {
-  content: '';
+  content: "";
   position: absolute;
   background: #ad5913;
-  ;
   inset: 15px;
   border-radius: 15px;
   transition: all 0.5s ease;
-}  
- .product-card:hover:before {
+}
+.product-card:hover:before {
   background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
   animation: rotBGimg 3.5s linear infinite;
 }
@@ -367,8 +391,8 @@ footer a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  justify-content:center;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(to bottom, red, orange);
   padding: 4rem 1rem;
 }
@@ -376,9 +400,9 @@ footer a:hover {
 .feature {
   display: flex;
   gap: 2rem;
-  justify-content:center;
-  align-items:center;
-  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   color: white;
   font-size: 2rem;
   border: 15px solid #ff8a3c;
